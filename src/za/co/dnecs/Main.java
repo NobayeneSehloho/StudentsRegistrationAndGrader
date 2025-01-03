@@ -60,13 +60,17 @@ public class Main {
         SearchStudent studentNames = new SearchStudent();
         String searchByFirstName = "James";
 
-        ArrayList<Student> result = studentNames.searchStudentNames(searchByFirstName,list);
+        ArrayList<Student> result = studentNames.searchStudentByFirstName(searchByFirstName,list);
         System.out.println(" ");
         System.out.println("Students with the first name " + "'" + searchByFirstName +"'");
         Student.printAllStudent(result);
 
         /// SEARCH FOR LASTNAME
         String searchByLastName = "Smith";
+        ArrayList<Student> lastNameResults = studentNames.searchStudentByLastName(searchByLastName,list);
+        System.out.println(" ");
+        System.out.println("Students with the last name " + "'" + searchByLastName +"'");
+        Student.printAllStudent(lastNameResults);
 
         /// SEARCH FOR STUDENTNUMBER
         int searchByStudentNumber = 2009110902;
