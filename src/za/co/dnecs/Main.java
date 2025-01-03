@@ -79,7 +79,13 @@ public class Main {
         boolean searchByInternationalStatus = true;
 
         /// SEARCH FOR Registered Students
-        Enrolment searchByEnrolmentStatus = Enrolment.REGISTERED;
+        Enrolment searchByEnrolmentStatus = Enrolment.ACCEPTED;
+        String status = String.valueOf(Enrolment.valueOf(String.valueOf(searchByEnrolmentStatus)));
+        ArrayList<Student> enrolmentStatusResults = studentNames.searchStudentByEnrolmentStatus(Enrolment.valueOf(status),list);
+        System.out.println(" ");
+        System.out.println("Students with the Enrolement status of " + "'" + searchByEnrolmentStatus +"'");
+       Student.printAllStudent(enrolmentStatusResults);
+
 
         /// SEARCH FOR Students in Specific Department
         String searchByDepartment = "Information Technology";
