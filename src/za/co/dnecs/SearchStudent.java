@@ -1,7 +1,5 @@
 package za.co.dnecs;
 
-import com.oracle.webservices.internal.api.EnvelopeStyle;
-
 import java.util.ArrayList;
 
 public class SearchStudent {
@@ -96,10 +94,30 @@ public class SearchStudent {
         return names;
     }
 
-/*public ArrayList<Student> searchByStudentNumber(int studentNumber, ArrayList<Student> students){
+    /**
+     *
+     * Working
+     * @param country
+     * @param studentsList
+     * @return
+     */
+    public ArrayList<Student> searchStudentByCountry(Country country, ArrayList<Student> studentsList){
     ArrayList<Student> names = new ArrayList<>();
+
+
+    for(Student student : studentsList){
+        if (student.getCountry().equals(country)) {
+            names.add(student);
+        }
+    }
+
+    if (names.isEmpty()) {
+        System.out.println("Students from Country \"" + country + "\" do not exist.");
+    }
+
+
     return names;
-}*/
+}
 
 /*public ArrayList<Student> searchByStudentNumber(int studentNumber, ArrayList<Student> students){
     ArrayList<Student> names = new ArrayList<>();

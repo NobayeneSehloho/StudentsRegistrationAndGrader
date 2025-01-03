@@ -86,6 +86,14 @@ public class Main {
         System.out.println("Students with the Enrolement status of " + "'" + searchByEnrolmentStatus +"'");
        Student.printAllStudent(enrolmentStatusResults);
 
+        /// SEARCH FOR all Students from Specific Country
+        Country searchByCountry = Country.SOUTH_AFRICA;
+        String country = String.valueOf(Country.valueOf(String.valueOf(searchByCountry)));
+        ArrayList<Student> countryResults = studentNames.searchStudentByCountry(Country.valueOf(country),list);
+        System.out.println(" ");
+        System.out.println("Students with the Enrolment status of " + "'" + searchByCountry +"'");
+        Student.printAllStudent(countryResults);
+
 
         /// SEARCH FOR Students in Specific Department
         String searchByDepartment = "Information Technology";
