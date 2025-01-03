@@ -102,22 +102,20 @@ public class SearchStudent {
      * @return
      */
     public ArrayList<Student> searchStudentByCountry(Country country, ArrayList<Student> studentsList){
-    ArrayList<Student> names = new ArrayList<>();
+        ArrayList<Student> names = new ArrayList<>();
 
-
-    for(Student student : studentsList){
-        if (student.getCountry().equals(country)) {
-            names.add(student);
+        for(Student student : studentsList){
+            if (student.getCountry().equals(country)) {
+                names.add(student);
+            }
         }
+
+        if (names.isEmpty()) {
+            System.out.println("Students from Country \"" + country + "\" do not exist.");
+        }
+
+        return names;
     }
-
-    if (names.isEmpty()) {
-        System.out.println("Students from Country \"" + country + "\" do not exist.");
-    }
-
-
-    return names;
-}
 
     /**
      *
