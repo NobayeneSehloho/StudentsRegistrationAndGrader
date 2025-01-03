@@ -3,7 +3,7 @@ package za.co.dnecs;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import za.co.dnecs.Student;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -76,7 +76,12 @@ public class Main {
         int searchByStudentNumber = 2009110902;
 
         /// SEARCH FOR InternationalStatus
-        boolean searchByInternationalStatus = true;
+        boolean internationalStatus = true;
+        ArrayList<Student> citizenshipResults = studentNames.searchStudentByCitizensOrNot(internationalStatus,list);
+        System.out.println(" ");
+        System.out.println("Students with the last name " + "'" + internationalStatus +"'");
+        Student.printAllStudent(citizenshipResults);
+
 
         /// SEARCH FOR Registered Students
         Enrolment searchByEnrolmentStatus = Enrolment.ACCEPTED;
@@ -93,6 +98,8 @@ public class Main {
         System.out.println(" ");
         System.out.println("Students with the Enrolment status of " + "'" + searchByCountry +"'");
         Student.printAllStudent(countryResults);
+
+
 
 
         /// SEARCH FOR Students in Specific Department

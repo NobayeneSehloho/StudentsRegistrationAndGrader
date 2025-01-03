@@ -119,10 +119,28 @@ public class SearchStudent {
     return names;
 }
 
-/*public ArrayList<Student> searchByStudentNumber(int studentNumber, ArrayList<Student> students){
+    /**
+     *
+     * Working
+     * @param international
+     * @param studentsList
+     * @return
+     */
+    public ArrayList<Student> searchStudentByCitizensOrNot(boolean international, ArrayList<Student> studentsList){
     ArrayList<Student> names = new ArrayList<>();
+
+        for(Student student : studentsList){
+            if (student.checkIfInternational(student.getCountry()) == international) {
+                names.add(student);
+            }
+        }
+
+        if (names.isEmpty()) {
+            System.out.println("Students with International Status of \"" + international + "\" do not exist.");
+        }
+
     return names;
-}*/
+}
 
 }
 
