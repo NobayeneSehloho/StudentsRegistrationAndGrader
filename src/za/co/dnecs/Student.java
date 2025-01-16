@@ -2,10 +2,8 @@ package za.co.dnecs;
 /**
  * imports
  */
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.LinkedList;
 
 /**
  * class
@@ -27,9 +25,12 @@ public class Student {
     private short initialCapacity = 32767;
     private int studentNumber = 0;
 
+    private Date intakeYear;
+
 
     public Student(){
     }
+
 
     public Student(String firstName, String lastName, Country country, Date dateOfBirth, int phoneNumber, String address, Enrolment status){
         this.firstName = firstName;
@@ -161,5 +162,13 @@ public class Student {
             System.out.printf("%-15s %-15s %-10s %-15tF  %-12d    %-20s %-10s      %-35s %n",
                     s.firstName, s.lastName, s.country, s.dateOfBirth, s.phoneNumber, s.address, s.status, s.isInternationalStudent());
         }
+    }
+
+
+    public String createStudentNumber(Date intakeYear){
+
+        String studentNumber = "";
+
+        return studentNumber;
     }
 }

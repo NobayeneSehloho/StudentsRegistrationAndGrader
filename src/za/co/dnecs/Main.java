@@ -2,6 +2,7 @@ package za.co.dnecs;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Comparator;
 import java.util.Date;
 
 
@@ -98,6 +99,21 @@ public class Main {
         System.out.println(" ");
         System.out.println("Students with the Enrolment status of " + "'" + searchByCountry +"'");
         Student.printAllStudent(countryResults);
+
+
+
+        ///SORT STUDENTS BY FIRSTNAME
+        // Comparator to compare by first name
+        Comparator<Student> compareByFirstNames = Comparator.comparing(Student::getFirstName);
+
+        // Use the SortStudent class to sort the list by first name
+        SortStudent sortFirstName = new SortStudent();
+        ArrayList<Student> sortedListByFirst = sortFirstName.sortByFirstName(list, compareByFirstNames);
+
+        // Print the sorted list
+        System.out.println(" ");
+        System.out.println("Sort students by their first names:");
+        Student.printAllStudent(sortedListByFirst);
 
 
 
