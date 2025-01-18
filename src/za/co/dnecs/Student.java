@@ -269,6 +269,7 @@ public class Student {
         this.studentNumber = createStudentNumber(intakeYear);
     }
 
+
     // Static method to create a unique student number
     public String createStudentNumber(int intakeYear) {
         // Increment the shared counter for all instances
@@ -320,6 +321,7 @@ public class Student {
     public boolean isInternationalStudent() {
         return this.country != Country.SOUTH_AFRICA;
     }
+
 
 
     // Add student to a system
