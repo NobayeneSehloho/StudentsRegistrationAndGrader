@@ -14,8 +14,8 @@ public class StudentRegistration extends Student {
        super();
     }
 
-    public StudentRegistration(String firstName, String lastName, String country, Date dateOfBirth, String phoneNumber, String address, int studentNumber, Department department, Enrolment status, int intakeYear) {
-        super(firstName, lastName, Country.valueOf(country), dateOfBirth, phoneNumber, address, status);
+    public StudentRegistration(String firstName, String lastName, String country, Date dateOfBirth, String phoneNumber, String address, int studentNumber, Department department, Enrolment status) {
+        super(firstName, lastName, Country.valueOf(country), dateOfBirth, phoneNumber, address, department, status);
         this.studentNumber = studentNumber;
         this.department = department;
         this.status = status;

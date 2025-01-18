@@ -12,6 +12,7 @@ public enum Department {
 
     private final List<String> courses;
 
+
     // Constructor
     Department(List<String> courses) {
         this.courses = courses;

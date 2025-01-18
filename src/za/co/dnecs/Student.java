@@ -245,6 +245,7 @@ public class Student {
     private Country country;
     private Date dateOfBirth;
     private boolean isInternationalStudent;
+    private Department course;
     private Enrolment status;
     private String studentNumber;
     private static final int INTAKE_YEAR = 2009;
@@ -259,13 +260,14 @@ public class Student {
     public Student() {}
 
 
-    public Student(String firstName, String lastName, Country country, Date dateOfBirth, String phoneNumber, String address, Enrolment status) {
+    public Student(String firstName, String lastName, Country country, Date dateOfBirth, String phoneNumber, String address, Department course, Enrolment status) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.country = country;
         this.dateOfBirth = dateOfBirth;
         this.phoneNumber = phoneNumber;
         this.address = address;
+        this.course = course;
         this.status = status;
         // Generate and assign a unique student number
         this.studentNumber = createStudentNumber(INTAKE_YEAR);
@@ -287,6 +289,13 @@ public class Student {
         return INTAKE_YEAR + formattedNumber;
     }
 
+    public Department getCourse() {
+        return course;
+    }
+
+    public void setCourse(Department course) {
+        this.course = course;
+    }
 
     // Getters
     public String getStudentNumber() {
@@ -341,13 +350,13 @@ public class Student {
     public static void printAllStudent(ArrayList<Student> list){
         //System.out.println("Students List are per below: ");
         System.out.printf("%-15s %-15s %-10s %-15s  %-12s    %-20s %-10s    %-20s%n",
-                "First Name", "Last Name", "Country", "Date of Birth", "Phone Number", "Address", "Status", "International Student");
+                "First Name", "Last Name", "Country", "Date of Birth", "Phone Number", "Address", "Status", "SA Citizen");
         System.out.println("---------------------------------------------------------------------------------------------------------------------------------");
 
         // Print each student in a tabular format
         for (Student s : list) {
-            System.out.printf("%-15s %-15s %-10s %-15tF  %-12s    %-20s %-10s      %-35s  %-35s %n",
-                    s.firstName, s.lastName, s.country, s.dateOfBirth, s.phoneNumber, s.address, s.status, s.isInternationalStudent(), s.getStudentNumber());
+            System.out.printf("%-15s %-15s %-10s %-15tF  %-12s    %-20s %-10s      %-10s  %-15s %-10s %n",
+                    s.firstName, s.lastName, s.country, s.dateOfBirth, s.phoneNumber, s.address, s.status, s.isInternationalStudent(), s.getStudentNumber(), s.course);
         }
     }
 

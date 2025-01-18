@@ -20,6 +20,7 @@ public class Main {
                 new Date(2000 - 1900, Calendar.JANUARY, 15), // Jan 15, 2000
                 "+27123456789",
                 "123 Elm Street",
+                Department.COMPUTER_SCIENCE,
                 Enrolment.WAITING_LIST
         );
 
@@ -31,6 +32,7 @@ public class Main {
                 new Date(1998 - 1900, Calendar.MAY, 10), // May 10, 1998
                 "+27123456789",
                 "456 Maple Avenue",
+                Department.BUSINESS_ADMINISTRATION,
                 Enrolment.ACCEPTED
         );
 
@@ -41,6 +43,7 @@ public class Main {
                 new Date(1998 - 1900, Calendar.DECEMBER, 10), // May 10, 1998
                 "+27123456789",
                 "456 Maple Avenue",
+                Department.ELECTRICAL_ENGINEERING,
                 Enrolment.ACCEPTED
         );
 
@@ -51,11 +54,11 @@ public class Main {
         list.add(student1);
         list.add(student2);
         list.add(student3);
-        list.add(new Student("James", "Potter", Country.LESOTHO, new Date(1998 - 1900, Calendar.JULY, 4),"+27123456789", "456 Maple Avenue", Enrolment.WAITING_LIST));
-        list.add(new Student("Mary", "Bush", Country.SOUTH_AFRICA, new Date(1998 - 1900, Calendar.OCTOBER, 22),"+27123456789", "456 Maple Avenue", Enrolment.WAITING_LIST));
+        list.add(new Student("James", "Potter", Country.LESOTHO, new Date(1998 - 1900, Calendar.JULY, 4),"+27123456789", "456 Maple Avenue", Department.CIVIL_ENGINEERING, Enrolment.WAITING_LIST));
+        list.add(new Student("Mary", "Bush", Country.SOUTH_AFRICA, new Date(1998 - 1900, Calendar.OCTOBER, 22),"+27123456789", "456 Maple Avenue", Department.COMPUTER_SCIENCE, Enrolment.WAITING_LIST));
 
-        list.add(new Student("Noby", "Bush", Country.SOUTH_AFRICA, new Date(1998 - 1900, Calendar.OCTOBER, 22),"+27123456789", "456 Maple Avenue", Enrolment.WAITING_LIST));
-        list.add(new Student("Anne", "Belleck", Country.GERMANY, new Date(1982 - 1900, Calendar.JULY, 3),"+27123456789", "456 Orange Road", Enrolment.ACCEPTED));
+        list.add(new Student("Noby", "Bush", Country.SOUTH_AFRICA, new Date(1998 - 1900, Calendar.OCTOBER, 22),"+27123456789", "456 Maple Avenue", Department.MECHANICAL_ENGINEERING, Enrolment.WAITING_LIST));
+        list.add(new Student("Anne", "Belleck", Country.GERMANY, new Date(1982 - 1900, Calendar.JULY, 3),"+27123456789", "456 Orange Road", Department.BUSINESS_ADMINISTRATION, Enrolment.ACCEPTED));
 
 
         System.out.println(list.contains(student1));
