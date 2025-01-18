@@ -321,6 +321,7 @@ public class Student {
         return this.country != Country.SOUTH_AFRICA;
     }
 
+
     // Add student to a system
     public static void addStudentToSystem(Student student, ArrayList<Student> list) {
         if (list.size() < initialCapacity) {
@@ -330,6 +331,7 @@ public class Student {
             System.out.println("No more intake for this academic year.");
         }
     }
+
 
     public static void printAllStudent(ArrayList<Student> list){
         //System.out.println("Students List are per below: ");
@@ -343,6 +345,7 @@ public class Student {
                     s.firstName, s.lastName, s.country, s.dateOfBirth, s.phoneNumber, s.address, s.status, s.isInternationalStudent(), s.getStudentNumber());
         }
     }
+
 
 
     public boolean checkIfInternational(Country country){

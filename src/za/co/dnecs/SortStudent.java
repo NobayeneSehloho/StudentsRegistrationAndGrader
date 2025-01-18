@@ -5,13 +5,6 @@ import java.util.Comparator;
 
 public class SortStudent {
 
-//    public ArrayList<Student> sortByStudentNumber(ArrayList<Student> studentList){
-//        ArrayList<Student> sortedByStudentNumber = new ArrayList<>();
-//
-//        return sortedByStudentNumber;
-//    }
-//
-
 
     /**
      *
