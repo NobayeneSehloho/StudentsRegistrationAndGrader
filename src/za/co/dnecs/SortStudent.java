@@ -8,8 +8,8 @@ public class SortStudent {
 
     /**
      *
-     *
      * BUBBLE SORT to sort students by forst names
+     *
      * @param studentList
      * @param compareByFirstNames
      * @return
