@@ -10,6 +10,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
 
+
         ArrayList<Student> list = new ArrayList<>(32767);
 
         Student student1 = new Student(
@@ -19,10 +20,8 @@ public class Main {
                 new Date(2000 - 1900, Calendar.JANUARY, 15), // Jan 15, 2000
                 "+27123456789",
                 "123 Elm Street",
-                Enrolment.WAITING_LIST,
-                2009
+                Enrolment.WAITING_LIST
         );
-
 
 
         Student student2 = new Student(
@@ -32,8 +31,7 @@ public class Main {
                 new Date(1998 - 1900, Calendar.MAY, 10), // May 10, 1998
                 "+27123456789",
                 "456 Maple Avenue",
-                Enrolment.ACCEPTED,
-                2009
+                Enrolment.ACCEPTED
         );
 
         Student student3 = new Student(
@@ -43,8 +41,7 @@ public class Main {
                 new Date(1998 - 1900, Calendar.DECEMBER, 10), // May 10, 1998
                 "+27123456789",
                 "456 Maple Avenue",
-                Enrolment.ACCEPTED,
-                2009
+                Enrolment.ACCEPTED
         );
 
         //studentList.add(student1);
@@ -54,11 +51,11 @@ public class Main {
         list.add(student1);
         list.add(student2);
         list.add(student3);
-        list.add(new Student("James", "Potter", Country.LESOTHO, new Date(1998 - 1900, Calendar.JULY, 4),"+27123456789", "456 Maple Avenue", Enrolment.WAITING_LIST, 2009));
-        list.add(new Student("Mary", "Bush", Country.SOUTH_AFRICA, new Date(1998 - 1900, Calendar.OCTOBER, 22),"+27123456789", "456 Maple Avenue", Enrolment.WAITING_LIST, 2009));
+        list.add(new Student("James", "Potter", Country.LESOTHO, new Date(1998 - 1900, Calendar.JULY, 4),"+27123456789", "456 Maple Avenue", Enrolment.WAITING_LIST));
+        list.add(new Student("Mary", "Bush", Country.SOUTH_AFRICA, new Date(1998 - 1900, Calendar.OCTOBER, 22),"+27123456789", "456 Maple Avenue", Enrolment.WAITING_LIST));
 
-        list.add(new Student("Noby", "Bush", Country.SOUTH_AFRICA, new Date(1998 - 1900, Calendar.OCTOBER, 22),"+27123456789", "456 Maple Avenue", Enrolment.WAITING_LIST, 2009));
-        list.add(new Student("Anne", "Belleck", Country.GERMANY, new Date(1982 - 1900, Calendar.JULY, 3),"+27123456789", "456 Orange Road", Enrolment.ACCEPTED, 2015));
+        list.add(new Student("Noby", "Bush", Country.SOUTH_AFRICA, new Date(1998 - 1900, Calendar.OCTOBER, 22),"+27123456789", "456 Maple Avenue", Enrolment.WAITING_LIST));
+        list.add(new Student("Anne", "Belleck", Country.GERMANY, new Date(1982 - 1900, Calendar.JULY, 3),"+27123456789", "456 Orange Road", Enrolment.ACCEPTED));
 
 
         System.out.println(list.contains(student1));
@@ -131,8 +128,6 @@ public class Main {
         System.out.println(" ");
         System.out.println("Sort students by their first names:");
         Student.printAllStudent(sortedListByFirst);
-
-
 
 
         /// SEARCH FOR Students in Specific Department

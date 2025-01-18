@@ -247,6 +247,7 @@ public class Student {
     private boolean isInternationalStudent;
     private Enrolment status;
     private String studentNumber;
+    private static final int INTAKE_YEAR = 2009;
 
     // Static counter shared across all Student instances
     private static int countStudentNumber = 0;
@@ -254,9 +255,11 @@ public class Student {
     // Maximum number of students
     private static final int initialCapacity = 32767;
 
+
     public Student() {}
 
-    public Student(String firstName, String lastName, Country country, Date dateOfBirth, String phoneNumber, String address, Enrolment status, int intakeYear) {
+
+    public Student(String firstName, String lastName, Country country, Date dateOfBirth, String phoneNumber, String address, Enrolment status) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.country = country;
@@ -264,14 +267,13 @@ public class Student {
         this.phoneNumber = phoneNumber;
         this.address = address;
         this.status = status;
-
         // Generate and assign a unique student number
-        this.studentNumber = createStudentNumber(intakeYear);
+        this.studentNumber = createStudentNumber(INTAKE_YEAR);
     }
 
 
     // Static method to create a unique student number
-    public String createStudentNumber(int intakeYear) {
+    public String createStudentNumber(int INTAKE_YEAR) {
         // Increment the shared counter for all instances
         countStudentNumber++;
 
@@ -282,8 +284,9 @@ public class Student {
         String formattedNumber = df.format(countStudentNumber);
 
         // Combine the year and the formatted number
-        return intakeYear + formattedNumber;
+        return INTAKE_YEAR + formattedNumber;
     }
+
 
     // Getters
     public String getStudentNumber() {
