@@ -229,7 +229,6 @@
 //
 //}
 
-
 package za.co.dnecs;
 
 import java.text.DecimalFormat;
@@ -256,9 +255,7 @@ public class Student {
     // Maximum number of students
     private static final int initialCapacity = 32767;
 
-
     public Student() {}
-
 
     public Student(String firstName, String lastName, Country country, Date dateOfBirth, String phoneNumber, String address, Department course, Enrolment status) {
         this.firstName = firstName;
@@ -335,7 +332,6 @@ public class Student {
     }
 
 
-
     // Add student to a system
     public static void addStudentToSystem(Student student, ArrayList<Student> list) {
         if (list.size() < initialCapacity) {
@@ -359,7 +355,6 @@ public class Student {
                     s.firstName, s.lastName, s.country, s.dateOfBirth, s.phoneNumber, s.address, s.status, s.isInternationalStudent(), s.getStudentNumber(), s.course);
         }
     }
-
 
 
     public boolean checkIfInternational(Country country){

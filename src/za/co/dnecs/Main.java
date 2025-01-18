@@ -47,9 +47,6 @@ public class Main {
                 Enrolment.ACCEPTED
         );
 
-        //studentList.add(student1);
-        //student1.addStudentToSystem(student1);
-        //student2.addStudentToSystem(student2);
 
         list.add(student1);
         list.add(student2);
@@ -90,7 +87,6 @@ public class Main {
         System.out.println(" ");
         System.out.println("Students with the student number  " + "'" + searchByStudentNumber +"'");
         Student.printAllStudent(studentNumberResults);
-
 
 
         /// SEARCH FOR InternationalStatus

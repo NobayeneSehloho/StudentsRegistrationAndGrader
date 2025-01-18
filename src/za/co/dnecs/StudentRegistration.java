@@ -1,47 +1,24 @@
+
 package za.co.dnecs;
 
 import java.util.Date;
 import java.util.LinkedHashMap;
 
-public class StudentRegistration extends Student {
+public class StudentRegistration {
 
-    private int studentNumber;
-    private Department department;
-    private Enrolment status;
-    private LinkedHashMap<Integer, Student> studentRegister = new LinkedHashMap<>(32767);
+    private LinkedHashMap<Date, Student> studentRegister = new LinkedHashMap<>(32767);
 
-    StudentRegistration(){
-       super();
-    }
+    // add a stack for all students queues;
 
-    public StudentRegistration(String firstName, String lastName, String country, Date dateOfBirth, String phoneNumber, String address, int studentNumber, Department department, Enrolment status) {
-        super(firstName, lastName, Country.valueOf(country), dateOfBirth, phoneNumber, address, department, status);
-        this.studentNumber = studentNumber;
-        this.department = department;
-        this.status = status;
-    }
+    // create queues for all students;
+        // enrolled  --- into the course
 
-//    public String getStudentNumber() {
-//        return studentNumber;
-//    }
+        // registered --- registered in to applied course
 
-    public void setStudentNumber(int studentNumber) {
-        this.studentNumber = studentNumber;
-    }
+        // accepted --- accepted into the programme
 
-    public Department getDepartment() {
-        return department;
-    }
+        // waitingList  --- applied and on waitingList
 
-    public void setDepartment(Department department) {
-        this.department = department;
-    }
 
-    public Enrolment getStatus() {
-        return status;
-    }
 
-    public void setStatus(Enrolment status) {
-        this.status = status;
-    }
 }
