@@ -38,14 +38,56 @@ public class SortStudent {
                     swapped = true;
                 }
             }
-
             // If no swaps were made, the list is already sorted
             if (!swapped) {
                 break;
             }
         }
-
         return sortedByFirstName;
     }
+
+
+
+    /**
+     *
+     *
+     * INSERTION SORT to sort students by last names
+     * @param studentList
+     * @param compareByLastNames
+     * @return
+     */
+
+
+
+    /**
+     *
+     *
+     * SELECTION SORT to sort students by enrolment status
+     * @param studentList
+     * @param compareByEnrolmentStatus
+     * @return
+     */
+
+
+
+    /**
+     *
+     *
+     * MERGE SORT to sort students by country of origin
+     * @param studentList
+     * @param compareByCountryOfOrigin
+     * @return
+     */
+
+
+
+    /**
+     *
+     *
+     * QUICK SORT to sort students by registration date
+     * @param studentList
+     * @param compareByRegistrationDate
+     * @return
+     */
 
 }

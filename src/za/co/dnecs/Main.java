@@ -58,6 +58,7 @@ public class Main {
         list.add(new Student("Mary", "Bush", Country.SOUTH_AFRICA, new Date(1998 - 1900, Calendar.OCTOBER, 22),"+27123456789", "456 Maple Avenue", Enrolment.WAITING_LIST, 2009));
 
         list.add(new Student("Noby", "Bush", Country.SOUTH_AFRICA, new Date(1998 - 1900, Calendar.OCTOBER, 22),"+27123456789", "456 Maple Avenue", Enrolment.WAITING_LIST, 2009));
+        list.add(new Student("Anne", "Belleck", Country.GERMANY, new Date(1982 - 1900, Calendar.JULY, 3),"+27123456789", "456 Orange Road", Enrolment.ACCEPTED, 2015));
 
 
         System.out.println(list.contains(student1));
@@ -83,16 +84,21 @@ public class Main {
 
 
         /// SEARCH FOR STUDENTNUMBER
-        int searchByStudentNumber = 2009110902;
+        String searchByStudentNumber = "200900001";
+
+        ArrayList<Student> studentNumberResults = studentNames.searchStudentByStudentNumber(searchByStudentNumber,list);
+        System.out.println(" ");
+        System.out.println("Students with the student number  " + "'" + searchByStudentNumber +"'");
+        Student.printAllStudent(studentNumberResults);
 
 
 
         /// SEARCH FOR InternationalStatus
         boolean internationalStatus = true;
-       // ArrayList<Student> citizenshipResults = studentNames.searchStudentByCitizensOrNot(internationalStatus,list);
+        ArrayList<Student> citizenshipResults = studentNames.searchStudentByCitizensOrNot(internationalStatus,list);
         System.out.println(" ");
         System.out.println("Students with the last name " + "'" + internationalStatus +"'");
-        //Student.printAllStudent(citizenshipResults);
+        Student.printAllStudent(citizenshipResults);
 
 
         /// SEARCH FOR Registered Students
@@ -102,6 +108,7 @@ public class Main {
         System.out.println(" ");
         System.out.println("Students with the Enrolement status of " + "'" + searchByEnrolmentStatus +"'");
        Student.printAllStudent(enrolmentStatusResults);
+
 
         /// SEARCH FOR all Students from Specific Country
         Country searchByCountry = Country.SOUTH_AFRICA;

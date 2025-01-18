@@ -50,13 +50,14 @@ public class SearchStudent {
         return names;
     }
 
+
     /**
-     *  Not tested
+     *  Working
      * @param studentNumber
      * @param studentsList
      * @return
      */
-    public ArrayList<Student> searchStudentByStudentNumber(int studentNumber, ArrayList<Student> studentsList) {
+    public ArrayList<Student> searchStudentByStudentNumber(String studentNumber, ArrayList<Student> studentsList) {
         ArrayList<Student> names = new ArrayList<>();
 
         for (Student student : studentsList) {
@@ -68,9 +69,9 @@ public class SearchStudent {
         if (names.isEmpty()) {
             System.out.println("Students with Student Number \"" + studentNumber + "\" do not exist.");
         }
-
         return names;
     }
+
 
     /**
      *
@@ -97,6 +98,8 @@ public class SearchStudent {
 
     /**
      *
+     * LINEAR SEARCH
+     *
      * Working
      * @param country
      * @param studentsList
@@ -119,6 +122,7 @@ public class SearchStudent {
     }
 
     /**
+     * LINEAR SEARCH
      *
      * Working
      * @param international
@@ -140,6 +144,13 @@ public class SearchStudent {
 
     return names;
 }
+
+
+
+
+
+
+
 
 }
 
