@@ -14,16 +14,16 @@ public class StudentRegistration extends Student {
        super();
     }
 
-    public StudentRegistration(String firstName, String lastName, String country, Date dateOfBirth, int phoneNumber, String address, int studentNumber, Department department, Enrolment status) {
-        super(firstName, lastName, Country.valueOf(country), dateOfBirth, phoneNumber, address, status);
+    public StudentRegistration(String firstName, String lastName, String country, Date dateOfBirth, String phoneNumber, String address, int studentNumber, Department department, Enrolment status, int intakeYear) {
+        super(firstName, lastName, Country.valueOf(country), dateOfBirth, phoneNumber, address, status, intakeYear);
         this.studentNumber = studentNumber;
         this.department = department;
         this.status = status;
     }
 
-    public int getStudentNumber() {
-        return studentNumber;
-    }
+//    public String getStudentNumber() {
+//        return studentNumber;
+//    }
 
     public void setStudentNumber(int studentNumber) {
         this.studentNumber = studentNumber;

@@ -17,19 +17,23 @@ public class Main {
                 "Doe",
                 Country.SWAZILAND,
                 new Date(2000 - 1900, Calendar.JANUARY, 15), // Jan 15, 2000
-                1234567890,
+                "+27123456789",
                 "123 Elm Street",
-                Enrolment.WAITING_LIST
+                Enrolment.WAITING_LIST,
+                2009
         );
+
+
 
         Student student2 = new Student(
                 "James",
                 "Smith",
                 Country.SWEDEN,
                 new Date(1998 - 1900, Calendar.MAY, 10), // May 10, 1998
-                987654321,
+                "+27123456789",
                 "456 Maple Avenue",
-                Enrolment.ACCEPTED
+                Enrolment.ACCEPTED,
+                2009
         );
 
         Student student3 = new Student(
@@ -37,9 +41,10 @@ public class Main {
                 "Potter",
                 Country.SOUTH_AFRICA,
                 new Date(1998 - 1900, Calendar.DECEMBER, 10), // May 10, 1998
-                987654321,
+                "+27123456789",
                 "456 Maple Avenue",
-                Enrolment.ACCEPTED
+                Enrolment.ACCEPTED,
+                2009
         );
 
         //studentList.add(student1);
@@ -49,8 +54,11 @@ public class Main {
         list.add(student1);
         list.add(student2);
         list.add(student3);
-        list.add(new Student("James", "Potter", Country.LESOTHO, new Date(1998 - 1900, Calendar.JULY, 4),987654321, "456 Maple Avenue", Enrolment.WAITING_LIST));
-        list.add(new Student("Mary", "Bush", Country.SOUTH_AFRICA, new Date(1998 - 1900, Calendar.OCTOBER, 22),987654321, "456 Maple Avenue", Enrolment.WAITING_LIST));
+        list.add(new Student("James", "Potter", Country.LESOTHO, new Date(1998 - 1900, Calendar.JULY, 4),"+27123456789", "456 Maple Avenue", Enrolment.WAITING_LIST, 2009));
+        list.add(new Student("Mary", "Bush", Country.SOUTH_AFRICA, new Date(1998 - 1900, Calendar.OCTOBER, 22),"+27123456789", "456 Maple Avenue", Enrolment.WAITING_LIST, 2009));
+
+        list.add(new Student("Noby", "Bush", Country.SOUTH_AFRICA, new Date(1998 - 1900, Calendar.OCTOBER, 22),"+27123456789", "456 Maple Avenue", Enrolment.WAITING_LIST, 2009));
+
 
         System.out.println(list.contains(student1));
         System.out.println(list.contains(student2));
@@ -73,15 +81,18 @@ public class Main {
         System.out.println("Students with the last name " + "'" + searchByLastName +"'");
         Student.printAllStudent(lastNameResults);
 
+
         /// SEARCH FOR STUDENTNUMBER
         int searchByStudentNumber = 2009110902;
 
+
+
         /// SEARCH FOR InternationalStatus
         boolean internationalStatus = true;
-        ArrayList<Student> citizenshipResults = studentNames.searchStudentByCitizensOrNot(internationalStatus,list);
+       // ArrayList<Student> citizenshipResults = studentNames.searchStudentByCitizensOrNot(internationalStatus,list);
         System.out.println(" ");
         System.out.println("Students with the last name " + "'" + internationalStatus +"'");
-        Student.printAllStudent(citizenshipResults);
+        //Student.printAllStudent(citizenshipResults);
 
 
         /// SEARCH FOR Registered Students
@@ -99,7 +110,6 @@ public class Main {
         System.out.println(" ");
         System.out.println("Students with the Enrolment status of " + "'" + searchByCountry +"'");
         Student.printAllStudent(countryResults);
-
 
 
         ///SORT STUDENTS BY FIRSTNAME

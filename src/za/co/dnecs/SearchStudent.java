@@ -60,7 +60,7 @@ public class SearchStudent {
         ArrayList<Student> names = new ArrayList<>();
 
         for (Student student : studentsList) {
-            if (student.getStudentNumber() == studentNumber) {
+            if (student.getStudentNumber().equals(studentNumber)) {
                 names.add(student);
             }
         }
